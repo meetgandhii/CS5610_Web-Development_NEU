@@ -1,0 +1,22 @@
+.odd{
+    padding: 10px 30px;
+    background-color: rgba(200,200,200,1);
+    margin: 10px 0;
+}
+.even{
+    padding: 10px 30px;
+    background-color: rgba(50,50,50,1);
+    color: white;
+    margin: 10px 0;
+}
+.title-for-labworks{
+    background-color: white;
+    padding: 0 10px;
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: -apple-system;
+    text-transform: uppercase;
+    color: black !important;
+}
