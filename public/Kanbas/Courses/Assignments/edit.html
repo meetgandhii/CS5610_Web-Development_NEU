@@ -1,100 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Edit Assignment</title>
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Kanbas/style.css">
 </head>
-<body>
-<div style="width: 100%; text-align: center; align-content: center; align-items: center;">
-    <h1 style="background: rgba(0, 255, 255, 0.5); width: fit-content; margin: 5px auto; padding: 5px;">
-        Assignments Edit Screen
-    </h1>
-</div>
-<table width="100%">
-    <tr>
-        <td valign="top" width="25%">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top" width="25%">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/index.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <select>
-                <option>SpreedGrader</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-            </select>
-            <hr>
-            <h3>Assignment Name</h3>
-            <input type="text" value="A1 - ENV + HTML"><br><br>
-            <textarea cols="20">This is the assignment description</textarea><br><br>
-            <label>Points</label>
-            <input type="text" value="100"><br><br>
-            <label>Assignment Group</label><br>
-            <select><option>ASSIGNMENTS</option></select><br><br>
-            <label>Display Grade as</label><br>
-            <select><option>Percentage</option></select><br><br>
-            <label>Submission Type</label><br>
-            <select><option>Online</option></select><br><br>
-            <label>Online Entry Options</label><br>
-            <input type="checkbox"><label>Text Entry</label><br>
-            <input type="checkbox"><label>Website URL</label><br>
-            <input type="checkbox"><label>Media Recordings</label><br>
-            <input type="checkbox"><label>Student Annotation</label><br>
-            <input type="checkbox"><label>File Uploads</label><br><br>
-            <label>Submission Attempts</label><br>
-            <select><option>Unlimited</option></select><br><br>
-            <label>Plagiarism Review</label><br>
-            <select><option>None</option></select><br><br>
-            <label>Group Assignment</label><br>
-            <input type="checkbox"><label>This is a group assignment</label><br>
-            <label>Peer Reviews</label><br>
-            <input type="checkbox"><label>Require Peer Reviews</label><br><br>
-            <label>Assign</label><br>
-            <label>Assign to</label><br>
-            <input type="text" value="Everyone"><br>
-            <br>
-            <label>Due</label><br>
-            <input type="date"><br><br>
-            <label>Available from</label><br>
-            <input type="date"><br><br>
-            <label>Until</label><br>
-            <input type="date"><br><br>
 
-            <button onclick="location.href='screen.html'">Cancel</button>
-            <button onclick="location.href='screen.html'">Save</button>
-        </td>
-    </tr>
-</table>
+<body style="margin-right: 40px;">
+    <table width="100%">
+        <tr>
+            <td valign="top" style="overflow: hidden;">
+                <ul class="kanbas-navigation-ul">
+                    <li class="kanbas-navigation-li" style="padding: 10px 0 0 0 !important;"><img src="/logo.png"
+                            width="65px" class="logo"></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Account/Profile/screen.html"><i
+                                class="kanbas-navigation-icon fa fa-user-circle"></i> Account</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Dashboard/dashboard.html"><i
+                                class="kanbas-navigation-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="kanbas-navigation-li active"><a class="active kanbas-navigation-a"
+                            href="/Kanbas/Courses/Home/index.html"><i class="kanbas-navigation-icon fas fa-book"></i>
+                            Courses</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-calendar-alt"></i> Calendar</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-inbox"></i> Inbox</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-clock"></i> History</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-desktop"></i> Studio</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-arrow-circle-right"></i>Commons</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-question-circle"></i> Help</a></li>
+                </ul>
+                
+
+            </td>
+            <td valign="top" width="100%" style="width: 100%;">
+                <table width="100%" style="width: 100%; border-spacing: 10px;
+                border-collapse: separate;">
+                    <tr width="100%" style="width: 100%;">
+                        <td>
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#"
+                                            style="text-decoration: none; color: rgba(200, 20, 20, 1);"> <i
+                                                class="fa fa-bars"></i> CS5610.11550.202410</a></li>
+                                    <li class="breadcrumb-item" aria-current="page">Assignments
+                                    </li>
+
+                                </ol>
+                            </nav>
+                        </td>
+                        <td>
+                            <button class="float-end"><i class="fa fa-glasses"></i>Student View</button>
+                        </td>
+                    </tr>
+
+                </table>
+                <hr>
+                <table width="100%" style="width: 100%; border-spacing: 20px 0;
+                border-collapse: separate;">
+                    <tr width="100%" style="width: 100%;">
+                        <td valign="top" style="width: 220px;">
+                            <ul class="account-navigation-ul">
+                                <li class="account-navigation-li"><a class="account-navigation-a "
+                                        href="/Kanbas/Courses/Home/index.html">Home</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Modules</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Piazza</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Zoom
+                                        Meetings</a></li>
+                                <li class="account-navigation-li active-account-link-border"><a
+                                        class="account-navigation-a"
+                                        href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Quizzes</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">People</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Panopto
+                                        Video</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">Discussions</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">Announcements</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Pages</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Files</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Rubrics</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Outcomes</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">Collaborations</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Syllabus</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
+
+                            </ul>
+                        </td>
+
+                        <td valign="top">
+                            <div><button style="border: 0 #fff solid;"></button>
+                                <button class="assignment-btn float-end btn" style="margin-right: 15px;"> <i
+                                        class="fa fa-ellipsis-v"></i></button>
+
+                                <span class="float-end" style="margin-right: 15px;"><i class="fa fa-check-circle"
+                                        style="color: green;"></i> Published</span>
+                            </div>
+                            <hr>
+                            <div style="text-align: center;">
+                                <h5>Assignment Name</h5>
+                                <input
+                                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;"
+                                    width="100%" type="text" value="A1 - ENV + HTML"><br><br>
+                                <textarea style="width: 100%;border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;"
+                                    rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti veritatis qui amet eum nostrum dolor, ad expedita? Sunt numquam expedita in animi, eveniet possimus aliquam corrupti aliquid nostrum maxime architecto.</textarea><br><br>
+                                <table style="border-collapse: separate; border-spacing: 20px; width: 100%;">
+                                    <tr>
+                                        <td align="right" valign="top"><label>Points</label></td>
+                                        <td align="left">
+                                            <input
+                                                style="width: 70%; border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;"
+                                                type="text" value="100">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top"><label>Assignment Group</label>
+
+                                        </td>
+                                        <td align="left"><select style="width: 70%; border-radius: 5px;">
+                                                <option>ASSIGNMENTS</option>
+                                            </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top"><label>Display Grade as</label>
+                                        </td>
+                                        <td align="left"><select style="width: 70%; border-radius: 5px;">
+                                                <option>Percentage</option>
+                                            </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top"><label>Submission Type</label>
+                                        </td>
+                                        <td align="left">
+                                            <div
+                                                style="border: 0.5px solid rgba(70,70,70,0.3); width: 50%; padding: 10px; border-radius: 5px;">
+                                                <select style="width: 40%; border-radius: 5px;margin-bottom: 10px;">
+                                                    <option>Online</option>
+                                                </select><br>
+                                                <label style="margin-bottom: 10px;"><strong>Online Entry
+                                                        Options</strong></label><br>
+                                                <input type="checkbox"><label style="margin-left: 10px">Text
+                                                    Entry</label><br>
+                                                <input type="checkbox"><label style="margin-left: 10px">Website
+                                                    URL</label><br>
+                                                <input type="checkbox"><label style="margin-left: 10px">Media
+                                                    Recordings</label><br>
+                                                <input type="checkbox"><label style="margin-left: 10px">Student
+                                                    Annotation</label><br>
+                                                <input type="checkbox"><label style="margin-left: 10px">File
+                                                    Uploads</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top">
+                                            <label>Submission Attempts</label>
+
+                                        </td>
+                                        <td align="left">
+                                            <select style="width: 70%; border-radius: 5px;">
+                                                <option>Unlimited</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top"><label>Plagiarism Review</label>
+                                        </td>
+                                        <td align="left"><select style="width: 70%; border-radius: 5px;">
+                                                <option>None</option>
+                                            </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top"><label>Group Assignment</label>
+                                        </td>
+                                        <td align="left"><input type="checkbox"><label style="margin-left: 5px;">This is
+                                                a
+                                                group assignment</label><br>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="right" valign="top"><label>Peer Reviews</label>
+                                        </td>
+                                        <td align="left"><input type="checkbox"><label style="margin-left: 5px;">Require
+                                                Peer Reviews</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top"><label>Assign</label>
+                                        </td>
+                                        <td align="left">
+                                            <div
+                                                style="border: 0.5px solid rgba(70,70,70,0.3); width: 50%; padding: 10px; border-radius: 5px;">
+                                                <label>Assign to</label><br>
+                                                <input
+                                                    style="width: 80%;padding: 3px 10px; border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;"
+                                                    type="text" value="Everyone"><br>
+                                                <label>Due</label><br>
+                                                <input
+                                                    style="width: 80%;border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;"
+                                                    type="date"><br>
+                                                <label>Available from</label><br>
+                                                <input
+                                                    style="width: 80%;border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;"
+                                                    type="date"><br>
+                                                <label>Until</label><br>
+                                                <input
+                                                    style="width: 80%;border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;"
+                                                    type="date">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <div style="margin: 0 50px 10px 50px;">
+                    <input type="checkbox">
+                    <label style="margin-left: 10px">Notify users that this content has
+                        changed</label>
+                    <button class="float-end btn btn-danger">Save</button>
+                    <button class="float-end btn">Cancel</button>
+                </div>
+                <hr>
+            </td>
+        </tr>
+    </table>
+  
 </body>
+
 </html>
+<!-- 
+<label>Points</label>
+                                <input style="width: 70%;border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;" type="text" value="100"><br>
+                                <label>Assignment Group</label>
+                                <select style="width: 90%; border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;">
+                                    <option>ASSIGNMENTS</option>
+                                </select><br><br>
+                                <label>Display Grade as</label>
+                                <select style="width: 70%; border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;">
+                                    <option>Percentage</option>
+                                </select><br><br>
+
+                                <label>Submission Type</label>
+                                <select style="width: 70%; border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;">
+                                    <option>Online</option>
+                                </select><br><br>
+
+                                <label>Online Entry Options</label><br>
+                                <input type="checkbox"><label>Text Entry</label><br>
+                                <input type="checkbox"><label>Website URL</label><br>
+                                <input type="checkbox"><label>Media Recordings</label><br>
+                                <input type="checkbox"><label>Student Annotation</label><br>
+                                <input type="checkbox"><label>File Uploads</label><br><br>
+                                <label>Submission Attempts</label><br>
+                                <select>
+                                    <option>Unlimited</option>
+                                </select><br><br>
+                                <label>Plagiarism Review</label><br>
+                                <select>
+                                    <option>None</option>
+                                </select><br><br>
+                                <label>Group Assignment</label><br>
+                                <input type="checkbox"><label>This is a group assignment</label><br>
+                                <label>Peer Reviews</label><br>
+                                <input type="checkbox"><label>Require Peer Reviews</label><br><br>
+
+                                <label>Assign</label><br>
+                                <label>Assign to</label><br>
+                                <input style="border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;" type="text" value="Everyone"><br>
+                                <br>
+                                <label>Due</label><br>
+                                <input style="border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;" type="date"><br><br>
+                                <label>Available from</label><br>
+                                <input style="border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;" type="date"><br><br>
+                                <label>Until</label><br>
+                                <input style="border-radius: 5px; border: 1px rgba(70,70,70,0.3) solid;" type="date"><br><br> -->

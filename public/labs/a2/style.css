@@ -267,3 +267,19 @@ p#id-selector-2 {
 .wd-width-75px {
     width: 75px;
 }
+
+div.section-new{
+    padding: 10px;
+    border-bottom: 3px dotted #7070ff;
+}
+div.section-new:nth-child(odd){
+    background-color: #bbb;
+    cursor: wait;
+}
+div.section-new:nth-child(even){
+    background-color: #ddd;
+    cursor: copy;
+}
+div.section-new:hover{
+    background-color: white;
+}

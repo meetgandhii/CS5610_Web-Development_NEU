@@ -1,60 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/style.css">
+    <style>
+
+    </style>
 </head>
+
 <body>
-<div style="width: 100%; text-align: center; align-content: center; align-items: center;">
-    <h1 style="background: rgba(0, 255, 255, 0.5); width: fit-content; margin: 5px auto; padding: 5px;">
-        Profile Screen
-    </h1>
-</div>
-<table width="100%">
-    <tr>
-        <td valign="top" width="25%">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top" width="25%">
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <h5 style="font-weight: 400">Jose Annunziato's Profile</h5>
-            <hr>
-            <br>
-            <button onclick="location.href='edit.html'" style="float: right"><i class="fa fa-pencil"></i> Edit Profile</button>
-            <h2 style="font-weight: 400">Jose Annunziato</h2>
-            <h3 style="font-weight: 400">Contact</h3>
-            <h5 style="font-weight: 400">No registered services, you can add some on the <a href="#">settings</a> page.</h5>
-            <h3 style="font-weight: 400">Biography</h3>
-            <h5 style="font-weight: 400">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</h5>
-            <h3 style="font-weight: 400">Links</h3>
-            <h5 style="font-weight: 400"><a href="#">YouTube</a> </h5>
+    <!-- <div style="width: 100%; text-align: center; align-content: center; align-items: center;">
+        <h1 style="background: rgba(0, 255, 255, 0.5); width: fit-content; margin: 5px auto; padding: 5px;">
+            Profile Screen
+        </h1>
+    </div> -->
+    <table width="100%" style="border-collapse: separate; border-spacing: 0px;">
+        <!-- style="border-collapse: separate; border-spacing: 22px 0px;" -->
+        <tr>
+            <td valign="top" width="90px" style="padding-right: 22px; overflow: hidden;">
+                <ul class="kanbas-navigation-ul" style="width: 90px">
+                    <li class="kanbas-navigation-li" style="padding: 10px 0 0 0 !important;"><img src="/logo.png"
+                            onclick="location.href='/Kanbas/Courses/Home/index.html'" width="65px"></li>
+                    <li class="kanbas-navigation-li active"><a class="active kanbas-navigation-a"
+                            href="/Kanbas/Account/Profile/screen.html"><i
+                                class="kanbas-navigation-icon fa fa-user-circle icon-active"></i> Account</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Dashboard/dashboard.html"><i
+                                class="kanbas-navigation-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Courses/Home/index.html"><i class="kanbas-navigation-icon fas fa-book"></i>
+                            Courses</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-calendar-alt"></i> Calendar</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-inbox"></i> Inbox</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-clock"></i> History</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-desktop"></i> Studio</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-arrow-circle-right"></i>Commons</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-question-circle"></i> Help</a></li>
+                </ul>
+            </td>
+            <td valign="top">
+
+                <h6 style="font-weight: 400" style="height: 20px;"><img src="/hamburger.png" width="12px"> Jose
+                    Annunziato's Profile</h6>
+                <hr>
+                <table>
+                    <tr>
+                        <td valign="top" width="195px">
+                            <ul class="account-navigation-ul" width="195px">
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">Notifications</a></li>
+                                <li class="account-navigation-li active-account-link-border"><a
+                                        class="account-navigation-a active-account-link"
+                                        href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Files</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">ePortfolios</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Shared
+                                        Content</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">The Hub</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Qwickly
+                                        Course Tools</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Global
+                                        Announcements</a></li>
+                            </ul>
+                        </td>
+                        <td valign="top">
 
 
-        </td>
-    </tr>
-</table>
+                            <i class="fa fa-user-circle" style="color: gray; font-size: 6em;">
+
+                            </i>
+                            <button onclick="location.href='edit.html'" style="float: right">
+                                <i class="fa fa-pencil-alt">
+                                </i> Edit
+                                Profile
+                            </button>
+                            <h6
+                                style="margin-top: 20px;font-weight: 400; font-size: 14px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+
+                                <span style="font-size: 17px;">
+                                    Jose Annunziato
+                                </span>
+
+                            </h6>
+                            <h4
+                                style="font-weight: 400; font-size: 20px; margin-top: 25px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                Contact</h4>
+                            <h6
+                                style="font-weight: 400; font-size: 14px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                No registered services, you can add some on the <a href="#"
+                                    style="color: rgba(200,20,20,1); text-decoration: none;">settings</a>
+                                page.</h6>
+                            <h4
+                                style="font-weight: 400; font-size: 20px; margin-top: 25px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                Biography</h4>
+                            <h6
+                                style="font-weight: 400; font-size: 14px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                Faculty, Software Engineer, AI, Space, and renewables
+                                enthusiast.</h6>
+                            <h4
+                                style="font-weight: 400; font-size: 20px; margin-top: 25px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                Links</h4>
+                            <h6
+                                style="font-weight: 400; font-size: 14px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                <a href="#" style="color: rgba(200,20,20,1); text-decoration: none;"><i
+                                        class="fa fa-link" style="color: gray;"></i> YouTube</a> <i
+                                    class="fas fa-external-link-alt" style="color: rgba(200,20,20,1);"></i></h6>
+
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
 </body>
+
 </html>

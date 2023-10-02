@@ -1,70 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Edit</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/style.css">
 </head>
+
 <body>
-<div style="width: 100%; text-align: center; align-content: center; align-items: center;">
-    <h1 style="background: rgba(0, 255, 255, 0.5); width: fit-content; margin: 5px auto; padding: 5px;">
-        Profile Edit Screen
-    </h1>
-</div>
-<table width="100%">
-    <tr>
-        <td valign="top" width="25%">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top" width="25%">
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <h3>Jose Annunziato</h3>
-            <label>Name:* </label>
-            <input type="text" value="Jose Annunziato">
-            <label>Pronouns: </label>
-            <select><option>None</option></select>
-            <label>Title: </label>
-            <input type="text" value="">
-            <h4>Contact</h4>
-            <h5 style="font-weight: 400">No registered services, you can add some on the <a href="#">settings</a> page.</h5>
-            <h4>Contact</h4>
-            <h5 style="font-weight: 400">No registered services, you can add some on the <a href="#">settings</a> page.</h5>
-            <h4>Biography</h4>
-            <h5 style="font-weight: 400">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</h5>
-            <textarea cols="30">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
-            <h4>Links</h4>
-            <ul><li><a href="#">YouTube Links to an external site.</a> </li></ul>
-            <table align="start" width="50%"><tr><th><h5>Title</h5></th><th><h5>URL</h5></th></tr></table>
-            <input type="text" value="YouTube"><i class="fa fa-arrow-right"></i><input type="text" value="https://www.youtube.com"><a href="#">Remove</a><br>
-            <button>Add another link</button><br>
-            <button onclick="location.href='screen.html'">Cancel</button>
-            <button onclick="location.href='screen.html'">Save Profile</button><br>
-            <button>Edit Profile</button>
-            <button onclick="location.href='screen.html'">Cancel Editing</button>
-        </td>
-    </tr>
-</table>
+    <!-- <div style="width: 100%; text-align: center; align-content: center; align-items: center;">
+        <h1 style="background: rgba(0, 255, 255, 0.5); width: fit-content; margin: 5px auto; padding: 5px;">
+            Profile Edit Screen
+        </h1>
+    </div> -->
+    <table width="100%" style="border-collapse: separate; border-spacing: 0px;">
+        <!-- style="border-collapse: separate; border-spacing: 22px 0px;" -->
+        <tr>
+            <td valign="top" width="90px" style="padding-right: 22px; overflow: hidden;">
+                <ul class="kanbas-navigation-ul" style="width: 90px">
+                    <li class="kanbas-navigation-li" style="padding: 10px 0 0 0 !important;"><img src="/logo.png"
+                            onclick="location.href='/Kanbas/Courses/Home/index.html'" width="65px"></li>
+                    <li class="kanbas-navigation-li active"><a class="active kanbas-navigation-a"
+                            href="/Kanbas/Account/Profile/screen.html"><i
+                                class="kanbas-navigation-icon fa fa-user-circle icon-active"></i> Account</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Dashboard/dashboard.html"><i
+                                class="kanbas-navigation-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Courses/Home/index.html"><i class="kanbas-navigation-icon fas fa-book"></i>
+                            Courses</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-calendar-alt"></i> Calendar</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-inbox"></i> Inbox</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-clock"></i> History</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-desktop"></i> Studio</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-arrow-circle-right"></i>Commons</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-question-circle"></i> Help</a></li>
+                </ul>
+            </td>
+            <!-- <td valign="top" width="25%">
+                <ul>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
+            </td>
+            <td valign="top">
+                <h4>Jose Annunziato</h4>
+                <label>Name:* </label>
+                <input type="text" value="Jose Annunziato">
+                <label>Pronouns: </label>
+                <select>
+                    <option>None</option>
+                </select>
+                <label>Title: </label>
+                <input type="text" value="">
+                <h4>Contact</h4>
+                <h6 style="font-weight: 400">No registered services, you can add some on the <a href="#">settings</a>
+                    page.</h5>
+                <h4>Contact</h4>
+                <h5 style="font-weight: 400">No registered services, you can add some on the <a href="#">settings</a>
+                    page.</h5>
+                <h4>Biography</h4>
+                <h5 style="font-weight: 400">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</h5>
+                <textarea cols="30">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">YouTube Links to an external site.</a> </li>
+                </ul>
+                <table align="start" width="50%">
+                    <tr>
+                        <th>
+                            <h5>Title</h5>
+                        </th>
+                        <th>
+                            <h5>URL</h5>
+                        </th>
+                    </tr>
+                </table>
+                <input type="text" value="YouTube"><i class="fa fa-arrow-right"></i><input type="text"
+                    value="https://www.youtube.com"><a href="#">Remove</a><br>
+                <button>Add another link</button><br>
+                <button onclick="location.href='screen.html'">Cancel</button>
+                <button onclick="location.href='screen.html'">Save Profile</button><br>
+                <button>Edit Profile</button>
+                <button onclick="location.href='screen.html'">Cancel Editing</button>
+            </td> -->
+            <td valign="top">
+
+                <h4 style="font-weight: 400" style="height: 20px;"><img src="/hamburger.png" width="12px"> Jose
+                    Annunziato's Profile</h4>
+                <hr>
+                <table>
+                    <tr>
+                        <td valign="top" width="195px">
+                            <ul class="account-navigation-ul" width="195px">
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">Notifications</a></li>
+                                <li class="account-navigation-li active-account-link-border"><a
+                                        class="account-navigation-a active-account-link"
+                                        href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Files</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">ePortfolios</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Shared
+                                        Content</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">The Hub</a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Qwickly
+                                        Course Tools</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Global
+                                        Announcements</a></li>
+                            </ul>
+                        </td>
+                        <td valign="top">
+                            <i class="fa fa-user-circle" style="color: gray; font-size: 6em;">
+                                
+                            </i>
+                            <button onclick="location.href='edit.html'" style="float: right">
+                                <i class="fa fa-pencil-alt">
+                                </i> Edit
+                                Profile
+                            </button>
+                            <h6 style="margin: 30px 0;">
+                                
+                            </h6>
+                            <label>Name:* </label>
+                            <h6></h6>
+                            <input type="text" value="Jose Annunziato">
+                            <h6></h6>
+                            <label>Pronouns: </label>
+                            <h6></h6>
+                            <select>
+                                <option>None</option>
+                            </select>
+                            <h6></h6>
+                            <label>Title: </label>
+                            <h6></h6>
+                            <input type="text" value="">
+                            <h4 style="font-weight: 400;">Contact</h4>
+                            <h6 style="font-weight: 400">No registered services, you can add some on the <a
+                                    style="color: rgba(200,20,20,1); text-decoration: none;" href="#">settings</a>
+                                page.</h6>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label"
+                                    style="font-size: 24px;">Biography</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    cols="30">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                            </div>
+                            <!-- <h4 style="font-weight: 400;">Biography</h4>
+                            <h6 style="font-weight: 400">Faculty, Software Engineer, AI, Space, and renewables
+                                enthusiast.</h6>
+                            <textarea
+                                cols="30">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea> -->
+                            <h4 style="font-weight: 400;">Links</h4>
+
+                            <table align="start" width="50%">
+                                <tr>
+                                    <th>
+                                        <h6>Title</h6>
+                                    </th>
+                                    <th>
+                                        <h6>URL</h6>
+                                    </th>
+                                </tr>
+                            </table>
+                            <input type="text" value="YouTube"><i class="fa fa-arrow-right"></i><input type="text"
+                                style="width: 100px;" value="https://www.youtube.com"><i class="fa fa-cross-wrong"
+                                style="color: rgba(200,20,20,1);"></i><br>
+                            <button>Add another link</button>
+                            <hr>
+                            <button onclick="location.href='screen.html'">Cancel</button>
+                            <button style="background-color: rgba(200,20,20,1); color: white;"
+                                onclick="location.href='screen.html'">Save Profile</button><br>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+    <script src="custom.js"></script>
 </body>
+
 </html>
