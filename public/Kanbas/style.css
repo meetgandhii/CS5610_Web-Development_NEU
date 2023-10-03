@@ -179,3 +179,32 @@ table.grades-table tr td:nth-child(2n), table.grades-table tr td:nth-child(2n+3)
 table.grades-table tbody tr td:nth-child(1){
     color: rgba(200, 20, 20, 1);
 }
+
+.setting-li{
+    padding: 5px 10px;
+    border-bottom: 0.5px solid rgba(70, 70, 70, 0.3);
+    text-align: center;
+}
+.setting-li .setting-a{
+    color: rgba(200, 20, 20, 1);
+    
+    text-decoration: none;
+    margin: 0;
+    text-align: center;
+}
+.setting-ul{
+    list-style: none; 
+    padding-left: 0;
+    
+    width: fit-content;
+}
+.active-setting{
+    border-top: 0.5px solid rgba(70, 70, 70, 0.3);
+    border-right: 0.5px solid rgba(70, 70, 70, 0.3);
+    border-left: 0.5px solid rgba(70, 70, 70, 0.3);
+    border-bottom: 0;
+}
+select{
+    -webkit-appearance: menulist-button;
+                            height: 37px;
+}

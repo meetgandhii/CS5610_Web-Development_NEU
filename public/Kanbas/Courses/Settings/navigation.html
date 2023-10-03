@@ -1,89 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Navigation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Kanbas/style.css">
+    <script src="public/vendors/fontawesome/js/all.js"></script>
 </head>
-<body>
-<div style="width: 100%; text-align: center; align-content: center; align-items: center;">
-    <h1 style="background: rgba(0, 255, 255, 0.5); width: fit-content; margin: 5px auto; padding: 5px;">
-        Navigation Screen
-    </h1>
-</div>
 
-<table width="100%">
-    <tr>
-        <td valign="top" width="20%">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top" width="20%">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/index.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
-            </ul>
-        </td>
-        <td valign="top" width="60%">
-            <nav>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li style="display: inline"><a style="text-decoration: none; border-right: 1px solid black; padding-right: 4px;" href="">Course Details</a></li>
-                    <li style="display: inline"><a style="text-decoration: none; border-right: 1px solid black; padding-right: 4px;" href="">Section</a></li>
-                    <li style="display: inline"><a style="text-decoration: none; border-right: 1px solid black; padding-right: 4px;" href="/Kanbas/Courses/Settings/navigation.html">Navigation</a></li>
-                    <li style="display: inline"><a style="text-decoration: none; border-right: 1px solid black; padding-right: 4px;" href="">Apps</a></li>
-                    <li style="display: inline"><a style="text-decoration: none; border-right: 1px solid black; padding-right: 4px;" href="">Feature Options</a></li>
-                    <li style="display: inline"><a style="text-decoration: none; padding-right: 4px;" href="">Integrations</a></li>
+<body>
+    <div style="width: 100%; text-align: center; align-content: center; align-items: center;">
+        <h1 style="background: rgba(0, 255, 255, 0.5); width: fit-content; margin: 5px auto; padding: 5px;">
+            Navigation Screen
+        </h1>
+    </div>
+
+    <table width="100%">
+        <tr>
+            <td valign="top" style="overflow: hidden; width: 100px;">
+                <ul class="kanbas-navigation-ul">
+                    <li class="kanbas-navigation-li" style="padding: 10px 0 0 0 !important;"><img src="/logo.png"
+                            width="65px" class="logo"></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Account/Profile/screen.html"><i
+                                class="kanbas-navigation-icon fa fa-user-circle"></i> Account</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a"
+                            href="/Kanbas/Dashboard/dashboard.html"><i
+                                class="kanbas-navigation-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="kanbas-navigation-li active"><a class="active kanbas-navigation-a"
+                            href="/Kanbas/Courses/Home/index.html"><i class="kanbas-navigation-icon fas fa-book"></i>
+                            Courses</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-calendar-alt"></i> Calendar</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-inbox"></i> Inbox</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon far fa-clock"></i> History</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-desktop"></i> Studio</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fas fa-arrow-circle-right"></i>Commons</a></li>
+                    <li class="kanbas-navigation-li"><a class="kanbas-navigation-a" href="#"><i
+                                class="kanbas-navigation-icon fa fa-question-circle"></i> Help</a></li>
                 </ul>
-            </nav>
-            <h3 style="font-weight: 400">Drag and drop items to reorder them in the course navigation</h3>
-            <ul style="list-style: none">
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Home</li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Modules <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i></li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Piazza <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Zoom Meetings <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Assignments <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Quizzes <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Grades <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">People <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Panopto Video <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i> </li>
-            </ul>
-            <h3 style="font-weight: 400">Drag items here to hide them from students.</h3>
-            <h5 style="font-weight: 400">Disabling most pages will casue students who visited those pages to be redirected to the course home page.</h5>
-            <ul style="list-style: none">
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Chat <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>  <h6 style="font-weight: 400; margin: 0; font-style: italic">Page disabled, won't appear in navigation</h6> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">SCORM <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>  <h6 style="font-weight: 400; margin: 0; font-style: italic">Page disabled, won't appear in navigation</h6> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Attendance <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>  <h6 style="font-weight: 400; margin: 0; font-style: italic">Page disabled, won't appear in navigation</h6> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Barnes and Noble Bookstore <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>  <h6 style="font-weight: 400; margin: 0; font-style: italic">Page disabled, won't appear in navigation</h6> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Digication <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>  <h6 style="font-weight: 400; margin: 0; font-style: italic">Page disabled, won't appear in navigation</h6> </li>
-                <li style="padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">Top Hat <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>  <h6 style="font-weight: 400; margin: 0; font-style: italic">Page disabled, won't appear in navigation</h6> </li>
-            </ul>
-        </td>
-    </tr>
-</table>
+
+            </td>
+            </td>
+            <td valign="top">
+                <table width="100%" style="width: 100%; border-spacing: 10px;
+                border-collapse: separate;">
+                    <tr width="100%" style="width: 100%;">
+                        <td>
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#"
+                                            style="text-decoration: none; color: rgba(200, 20, 20, 1);"> <i
+                                                class="fa fa-bars"></i> CS5610.11550.202410</a></li>
+                                    <li class="breadcrumb-item" aria-current="page">Settings
+                                    </li>
+
+                                </ol>
+                            </nav>
+                        </td>
+
+                    </tr>
+
+                </table>
+                <hr>
+
+                <table width="100%" style="width: 100%; border-spacing: 20px 0;
+                border-collapse: separate;">
+                    <tr width="100%" style="width: 100%;">
+                        <td valign="top" style="width: 180px;">
+                            <ul class="account-navigation-ul" style="width: 180px;">
+                                <li class="account-navigation-li"><a class="account-navigation-a "
+                                        href="/Kanbas/Courses/Home/index.html">Home</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Modules<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Piazza<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li">
+                                    <a class="account-navigation-a" href="#">Zoom
+                                        Meetings<i style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Quizzes<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">People<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Panopto
+                                        Video<i style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Discussions<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">Announcements<i style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Pages<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Files<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Rubrics<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Outcomes<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li"><a class="account-navigation-a"
+                                        href="#">Collaborations<i style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a></li>
+                                <li class="account-navigation-li"><a class="account-navigation-a" href="#">Syllabus<i
+                                            style="color: rgba(70, 70, 70, 0.3);"
+                                            class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
+                                </li>
+                                <li class="account-navigation-li active-account-link-border"><a
+                                        class="account-navigation-a"
+                                        href="/Kanbas/Courses/Settings/course_details.html">Settings</a></li>
+
+                            </ul>
+                        </td>
+                        <td valign="top" width="80%">
+                            <nav>
+                                <ul class="setting-ul">
+                                    <li class="setting-li" style="display: inline"><a class="setting-a"
+                                            href="">Course Details</a></li>
+                                    <li class="setting-li" style="display: inline"><a class="setting-a"
+                                            href="">Section</a></li>
+                                    <li class="setting-li active-setting" style="display: inline"><a class="setting-a"
+                                            href="/Kanbas/Courses/Settings/navigation.html">Navigation</a></li>
+                                    <li class="setting-li" style="display: inline"><a class="setting-a" href="">Apps</a>
+                                    </li>
+                                    <li class="setting-li" style="display: inline"><a class="setting-a" href="">Feature
+                                            Options</a></li>
+                                    <li class="setting-li" style="display: inline"><a class="setting-a"
+                                            href="">Integrations</a></li>
+                                </ul>
+                            </nav>
+                            <h6 style="font-weight: lighter; margin: 40px 0;">Drag and drop items to reorder them in the course navigation
+                            </h6>
+                            <ul style="list-style: none; padding: 0; width: 70%;">
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Home</li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Modules <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                </li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Piazza <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                </li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Zoom Meetings <i style="float: right; margin-right: 15px;"
+                                        class="fa fa-ellipsis-v"></i> </li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Assignments <i style="float: right; margin-right: 15px;"
+                                        class="fa fa-ellipsis-v"></i> </li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Quizzes <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                </li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Grades <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                </li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    People <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                </li>
+                                <li style="font-weight: 400; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Panopto Video <i style="float: right; margin-right: 15px;"
+                                        class="fa fa-ellipsis-v"></i> </li>
+                            </ul>
+                            <h6 style="font-weight: lighter; margin: 30px 0 5 0;">Drag items here to hide them from students.
+                            </h6>
+                            <h6 style="font-weight: lighter; font-size: smaller;">Disabling most pages will casue students who visited those
+                                pages to be redirected to the course home page.
+                            </h6>
+                            <ul style="list-style: none; padding: 0; width: 70%;">
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Chat <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    SCORM <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Attendance <i style="float: right; margin-right: 15px;"
+                                        class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Barnes and Noble Bookstore <i style="float: right; margin-right: 15px;"
+                                        class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Digication <i style="float: right; margin-right: 15px;"
+                                        class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Top Hat <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Syllabus <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Perusall <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Microsoft Teams Meetings <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    FACT Reporting and Photo Roster <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Progress Reports (Navigate) <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Microsoft Teams for Canvas <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    VHL Central <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Gradescope 1.3 <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    Credentials <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                <li style="font-weight: lighter; text-indent: 15px; padding: 5px 0 5px 12px; width: 60%; border: 0.5px solid rgb(188,188,188)">
+                                    iClicker <i style="float: right; margin-right: 15px;" class="fa fa-ellipsis-v"></i>
+                                    <h6 style="font-weight: lighter; margin: 0; font-style: italic">Page disabled, won't
+                                        appear in navigation</h6>
+                                </li>
+                                
+                            </ul>
+                            <button class="btn btn-danger">Save</button>
+                        </td>
+                    </tr>
+                </table>
 </body>
+
 </html>
