@@ -64,7 +64,7 @@ ul.kanbas-navigation-ul {
 }
 
 .account-navigation-a,
-.account-navigation-li {
+.account-navigation-li, .mobile-menu {
     color: rgba(200, 20, 20, 1);
     margin-bottom: 10px;
     text-decoration: none;
@@ -208,3 +208,24 @@ select{
     -webkit-appearance: menulist-button;
                             height: 37px;
 }
+
+.responsive-show-top{
+    display: none;
+}
+@media only screen and (max-width: 1000px) {
+    .responsive-hide-right{
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .responsive-hide-left{
+        display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .responsive-show-top{
+        display: block !important;
+    }
+  }

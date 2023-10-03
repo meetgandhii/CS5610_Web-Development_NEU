@@ -6,6 +6,15 @@
     <title>Title</title>
     <link href="/vendors/fontawesome/css/all.css" rel="stylesheet" />
     <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/Kanbas/style.css">
 </head>
 
@@ -17,8 +26,88 @@
     </div> -->
 
     <table width="100%;">
+        <tr class="responsive-show-top" style="width: 100%;">
+            <td style="width: 1000px;">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                    .
+                    <button style="color: black !important; background-color: transparent;"
+                        class="navbar-toggler float-end" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"
+                            style="color: black !important; background-color: transparent; text-align: center; padding: auto;">
+                            <i class="fa fa-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link mobile-menu"
+                                    href="/Kanbas/Account/Profile/screen.html">
+                                    <i class="fa fa-user-circle"></i> Account
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link mobile-menu"
+                                    href="/Kanbas/Dashboard/dashboard.html">
+                                    <i class="fa fa-tachometer-alt"></i> Dashboard
+                                </a></li>
+                            <li class="nav-item active dropdown"><a class="nav-link mobile-menu dropdown-toggle"
+                                    href="/Kanbas/Courses/Home/index.html" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-book"></i> Courses
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item mobile-menu" href="/Kanbas/Courses/Home/index.html">Home</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Modules</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Piazza</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Zoom Meetings</a>
+                                    <a class="dropdown-item mobile-menu"
+                                        href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Quizzes</a>
+                                    <a class="dropdown-item mobile-menu" href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                                    <a class="dropdown-item mobile-menu" href="#">People</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Panopto Video</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Discussions</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Announcements</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Pages</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Files</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Rubrics</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Outcomes</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Collaborations</a>
+                                    <a class="dropdown-item mobile-menu" href="#">Syllabus</a>
+                                    <a class="dropdown-item mobile-menu"
+                                        href="/Kanbas/Courses/Settings/course_details.html">Settings</a>
+
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link mobile-menu" href="#">
+                                    <i class="fa fa-calendar-alt"></i> Calendar
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link mobile-menu" href="#">
+                                    <i class="fa fa-inbox"></i> Inbox
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link mobile-menu" href="#">
+                                    <i class="fa fa-clock"></i> History
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link mobile-menu" href="#">
+                                    <i class="fa fa-desktop"></i> Studio
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link mobile-menu" href="#">
+                                    <i class="fa fa-arrow-circle-right"></i> Commons
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link mobile-menu" href="#">
+                                    <i class="fa fa-question-circle"></i> Help
+                                </a></li>
+
+
+
+                        </ul>
+
+                    </div>
+                </nav>
+            </td>
+        </tr>
         <tr>
-            <td valign="top" style="overflow: hidden;">
+            <td valign="top" style="overflow: hidden;" class="responsive-hide-left">
                 <ul class="kanbas-navigation-ul">
                     <li class="kanbas-navigation-li" style="padding: 10px 0 0 0 !important;"><img src="/logo.png"
                             width="65px" class="logo"></li>
@@ -92,7 +181,8 @@
             </td>
             <td valign="top" width="100%" style="width: 100%;">
                 <table width="100%" style="width: 100%; border-spacing: 10px;
-                border-collapse: separate;">
+                border-collapse: separate;" class="responsive-hide-left">
+
                     <tr width="100%" style="width: 100%;">
                         <td>
                             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -116,10 +206,11 @@
                 <table width="100%" style="width: 100%; border-spacing: 20px 0;
                 border-collapse: separate;">
                     <tr width="100%" style="width: 100%;">
-                        <td valign="top" style="width: 180px;">
+                        <td valign="top" style="width: 180px;" class="responsive-hide-left">
                             <ul class="account-navigation-ul">
-                                <li class="account-navigation-li active-account-link-border"><a class="account-navigation-a "
-                                        href="/Kanbas/Courses/Home/index.html">Home</a></li>
+                                <li class="account-navigation-li active-account-link-border"><a
+                                        class="account-navigation-a " href="/Kanbas/Courses/Home/index.html">Home</a>
+                                </li>
                                 <li class="account-navigation-li"><a class="account-navigation-a" href="#">Modules<i
                                             style="color: rgba(70, 70, 70, 0.3);"
                                             class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
@@ -137,8 +228,7 @@
                                             style="color: rgba(70, 70, 70, 0.3);"
                                             class="fa-flip-horizontal fa fa-eye-slash float-end"></i></a>
                                 </li>
-                                <li class="account-navigation-li"><a
-                                        class="account-navigation-a"
+                                <li class="account-navigation-li"><a class="account-navigation-a"
                                         href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
                                 <li class="account-navigation-li"><a class="account-navigation-a" href="#">People<i
                                             style="color: rgba(70, 70, 70, 0.3);"
@@ -183,6 +273,7 @@
                         </td>
                         <td valign="top" style="padding: 10px;">
                             <table>
+
                                 <tr>
                                     <div
                                         style="margin-bottom: 20px; justify-content: end; text-align: end; text-align: right;">
@@ -441,7 +532,7 @@
                                 <!-- Additional sections for Week 1 here -->
                             </div>
                         </td>
-                        <td valign="top">
+                        <td valign="top" class="responsive-hide-right">
                             <h2>Course Status</h2>
                             <div>
                                 <button><i class="fa fa-ban">Unpublish</i></button>
@@ -516,5 +607,7 @@
         </tr>
     </table>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </html>
