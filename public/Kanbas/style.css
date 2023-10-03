@@ -78,7 +78,7 @@ hr {
 }
 
 .active-account-link {
-    color: rgba(0, 0, 199, 1);
+    /* color: rgba(0, 0, 199, 1); */
     overflow: auto;
 }
 
