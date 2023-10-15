@@ -1,0 +1,176 @@
+[
+    {
+        "_id": "M100",
+        "name": "Subject 1 Week 0 - INTRO",
+        "sections": [
+            {
+                "heading": "Learning Objectives",
+                "points": [
+                    "Introduction to the course",
+                    "Learn what is Web Development",
+                    "Creating a development environment",
+                    "Creating a Web Application",
+                    "Get started with the 1st assignment"
+                ]
+            }, {
+                "heading": "Reading",
+                "points": ["Full Stack Developer - Chapter 1 - Introduction", "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML"]
+            }, {
+                "heading": "Slides",
+                "points": [
+                    "Introduction to Web Development Links to an external site.",
+                    "Creating an HTTP server with Node.js Links to an external site.",
+                    "Creating a React Application Links to an external site.",
+                    "Commit your source to GitHub.com Links to an external site.",
+                    "Deploying to Netlify Links to an external site.",
+                    "Deploying multiple branches in Netlify"
+                ]
+            }
+        ],
+        "course": "RS101"
+    },
+    {
+      "_id": "M101",
+      "name": "Week 1",
+      "sections": [
+          {
+              "heading": "Learning Objectives",
+              "points": [
+                "Learn how to create user interfaces with HTML", "Keep working on assignment 1", "Deploy the assignment to Netlify"
+            ]
+          }, {
+              "heading": "Reading",
+              "points": [
+                "Full Stack Developer - Chapter 1 - Introduction", "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML"
+            ]
+          }, {
+              "heading": "Slides",
+              "points": [
+                "Introduction to Web Development Links to an external site.",
+                "Creating an HTTP server with Node.js Links to an external site.",
+                "Creating a React Application Links to an external site.",
+                "Commit your source to GitHub.com Links to an external site.",
+                "Deploying to Netlify Links to an external site.",
+                "Deploying multiple branches in Netlify"
+            ]
+          }
+      ],
+      "course": "RS101"
+  },
+  {
+    "_id": "M102",
+    "name": "Subject 2 Week 0 - INTRO",
+    "sections": [
+        {
+            "heading": "Learning Objectives",
+            "points": [
+                "Introduction to the course",
+                "Learn what is Web Development",
+                "Creating a development environment",
+                "Creating a Web Application",
+                "Get started with the 1st assignment"
+            ]
+        }, {
+            "heading": "Reading",
+            "points": ["Full Stack Developer - Chapter 1 - Introduction", "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML"]
+        }, {
+            "heading": "Slides",
+            "points": [
+                "Introduction to Web Development Links to an external site.",
+                "Creating an HTTP server with Node.js Links to an external site.",
+                "Creating a React Application Links to an external site.",
+                "Commit your source to GitHub.com Links to an external site.",
+                "Deploying to Netlify Links to an external site.",
+                "Deploying multiple branches in Netlify"
+            ]
+        }
+    ],
+    "course": "RS102"
+},
+{
+  "_id": "M103",
+  "name": "Week 1",
+  "sections": [
+      {
+          "heading": "Learning Objectives",
+          "points": [
+            "Learn how to create user interfaces with HTML", "Keep working on assignment 1", "Deploy the assignment to Netlify"
+        ]
+      }, {
+          "heading": "Reading",
+          "points": [
+            "Full Stack Developer - Chapter 1 - Introduction", "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML"
+        ]
+      }, {
+          "heading": "Slides",
+          "points": [
+            "Introduction to Web Development Links to an external site.",
+            "Creating an HTTP server with Node.js Links to an external site.",
+            "Creating a React Application Links to an external site.",
+            "Commit your source to GitHub.com Links to an external site.",
+            "Deploying to Netlify Links to an external site.",
+            "Deploying multiple branches in Netlify"
+        ]
+      }
+  ],
+  "course": "RS102"
+},
+{
+  "_id": "M104",
+  "name": "Subject 3 Week 0 - INTRO",
+  "sections": [
+      {
+          "heading": "Learning Objectives",
+          "points": [
+              "Introduction to the course",
+              "Learn what is Web Development",
+              "Creating a development environment",
+              "Creating a Web Application",
+              "Get started with the 1st assignment"
+          ]
+      }, {
+          "heading": "Reading",
+          "points": ["Full Stack Developer - Chapter 1 - Introduction", "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML"]
+      }, {
+          "heading": "Slides",
+          "points": [
+              "Introduction to Web Development Links to an external site.",
+              "Creating an HTTP server with Node.js Links to an external site.",
+              "Creating a React Application Links to an external site.",
+              "Commit your source to GitHub.com Links to an external site.",
+              "Deploying to Netlify Links to an external site.",
+              "Deploying multiple branches in Netlify"
+          ]
+      }
+  ],
+  "course": "RS103"
+},
+{
+"_id": "M105",
+"name": "Week 1",
+"sections": [
+    {
+        "heading": "Learning Objectives",
+        "points": [
+          "Learn how to create user interfaces with HTML", "Keep working on assignment 1", "Deploy the assignment to Netlify"
+      ]
+    }, {
+        "heading": "Reading",
+        "points": [
+          "Full Stack Developer - Chapter 1 - Introduction", "Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML"
+      ]
+    }, {
+        "heading": "Slides",
+        "points": [
+          "Introduction to Web Development Links to an external site.",
+          "Creating an HTTP server with Node.js Links to an external site.",
+          "Creating a React Application Links to an external site.",
+          "Commit your source to GitHub.com Links to an external site.",
+          "Deploying to Netlify Links to an external site.",
+          "Deploying multiple branches in Netlify"
+      ]
+    }
+],
+"course": "RS103"
+}
+]

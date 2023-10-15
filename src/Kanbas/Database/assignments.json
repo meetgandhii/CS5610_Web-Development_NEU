@@ -1,0 +1,20 @@
+[
+  { "_id": "A101", "title": "A1 Setup", "course": "RS101", "subtitle": ["Week 0 Setup - Week Starting on Monday 01 September 2023 | ", " Sept 03, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A102", "title": "A1 Setup", "course": "RS101", "subtitle": ["Week 1 Setup - Week Starting on Monday 11 September 2023 | ", " Sept 13, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A103", "title": "A1 Setup", "course": "RS101", "subtitle": ["Week 2 Setup - Week Starting on Monday 21 September 2023 | ", " Sept 23, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A104", "title": "A1 Setup", "course": "RS101", "subtitle": ["Week 3 Setup - Week Starting on Monday 04 October 2023 | ", " Oct 06, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A105", "title": "A1 Setup", "course": "RS101", "subtitle": ["Week 4 Setup - Week Starting on Monday 11 October 2023 | ", " Oct 13, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A106", "title": "A1 Setup", "course": "RS101", "subtitle": ["Week 5 Setup - Week Starting on Monday 18 October 2023 | ", " Oct 20, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A201", "title": "B1 Setup", "course": "RS102", "subtitle": ["Week 0 Setup - Week Starting on Monday 04 September 2023 | ", " Sept 06, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A202", "title": "B1 Setup", "course": "RS102", "subtitle": ["Week 1 Setup - Week Starting on Monday 14 September 2023 | ", " Sept 16, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A203", "title": "B1 Setup", "course": "RS102", "subtitle": ["Week 2 Setup - Week Starting on Monday 24 September 2023 | ", " Sept 26, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A204", "title": "B1 Setup", "course": "RS102", "subtitle": ["Week 3 Setup - Week Starting on Monday 02 October 2023 | ", " Oct 04, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A205", "title": "B1 Setup", "course": "RS102", "subtitle": ["Week 4 Setup - Week Starting on Monday 09 October 2023 | ", " Oct 11, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A206", "title": "B1 Setup", "course": "RS102", "subtitle": ["Week 5 Setup - Week Starting on Monday 16 October 2023 | ", " Oct 18, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A301", "title": "C1 Setup", "course": "RS103", "subtitle": ["Week 0 Setup - Week Starting on Monday 07 September 2023 | ", " Sept 09, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A302", "title": "C1 Setup", "course": "RS103", "subtitle": ["Week 1 Setup - Week Starting on Monday 17 September 2023 | ", " Sept 19, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A303", "title": "C1 Setup", "course": "RS103", "subtitle": ["Week 2 Setup - Week Starting on Monday 27 September 2023 | ", " Sept 29, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A304", "title": "C1 Setup", "course": "RS103", "subtitle": ["Week 3 Setup - Week Starting on Monday 03 October 2023 | ", " Oct 05, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A305", "title": "C1 Setup", "course": "RS103", "subtitle": ["Week 4 Setup - Week Starting on Monday 10 October 2023 | ", " Oct 12, 2023 at 11:59 pm | 100pts"] },
+  { "_id": "A306", "title": "C1 Setup", "course": "RS103", "subtitle": ["Week 5 Setup - Week Starting on Monday 17 October 2023 | ", " Oct 19, 2023 at 11:59 pm | 100pts"] }
+]

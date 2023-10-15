@@ -1,0 +1,14 @@
+[
+    { "_id": "A101", "title": "A1", "course": "RS101" },
+    { "_id": "A102", "title": "A2", "course": "RS101" },
+    { "_id": "A103", "title": "A3", "course": "RS101" },
+    { "_id": "A104", "title": "A4", "course": "RS101" },
+    { "_id": "A201", "title": "B1", "course": "RS102" },
+    { "_id": "A202", "title": "B2", "course": "RS102" },
+    { "_id": "A203", "title": "B3", "course": "RS102" },
+    { "_id": "A204", "title": "B4", "course": "RS102" },
+    { "_id": "A301", "title": "C1", "course": "RS103" },
+    { "_id": "A302", "title": "C2", "course": "RS103" },
+    { "_id": "A303", "title": "C3", "course": "RS103" },
+    { "_id": "A304", "title": "C4", "course": "RS103" }
+]
