@@ -9,10 +9,11 @@ function Dashboard() {
         <div style={
             {
                 width: "100%",
-                display: "inline-block"
+                
             }
         }>
-            <div className="list-group">
+           
+            <div className="row">
                 {
                 courses.map((course) => (
                     <div key={
