@@ -60,7 +60,7 @@ function KanbasNavigation() {
             {links.map((link, index) => (
                 <li className={`kanbas-navigation-li ${pathname.includes(link.name) && "active"}`}>
                     <Link key={index} to={`/Kanbas/${link.name}`} className={`kanbas-navigation-a ${pathname.includes(link.name) && "active"}`}>
-                        <FontAwesomeIcon icon={link.icon} className={`kanbas-navigation-icon ${pathname.includes(link.name) && "icon-active"}`} />
+                        <FontAwesomeIcon style={{marginLeft: "23px"}} icon={link.icon} className={`kanbas-navigation-icon ${pathname.includes(link.name) && "icon-active"}`} />
                         {link.name}
                     </Link>
                 </li>
