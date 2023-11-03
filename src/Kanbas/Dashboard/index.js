@@ -1,18 +1,148 @@
-import React from "react";
+import {React, useState} from "react";
 import {Link} from "react-router-dom";
-import db from "../Database";
 import "./stylesheet.css";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-function Dashboard() {
-    const courses = db.courses;
+function Dashboard({
+    courses,
+    course,
+    setCourse,
+    addNewCourse,
+    deleteCourse,
+    updateCourse
+}) {
+
+
     return (
         <div style={
-            {
-                width: "100%",
-                
-            }
+            {width: "100%"}
         }>
-           
+
+            <div style={
+                {
+                    width: "30%",
+                    margin: "30px",
+                    backgroundColor: "#f0f0f0",
+                    padding: "20px",
+                    border: "1px solid #ccc",
+                    borderRadius: "5px"
+                }
+            }>
+                <input value={
+                        course.name
+                    }
+                    className="form-control"
+                    style={
+                        {
+                            marginBottom: "10px",
+                            padding: "5px",
+                            width: "100%"
+                        }
+                    }
+                    onChange={
+                        e => setCourse({
+                            ...course,
+                            name: e.target.value
+                        })
+                    }/>
+                <input value={
+                        course.secondLine
+                    }
+                    className="form-control"
+                    style={
+                        {
+                            marginBottom: "10px",
+                            padding: "5px",
+                            width: "100%"
+                        }
+                    }
+                    onChange={
+                        e => setCourse({
+                            ...course,
+                            secondLine: e.target.value
+                        })
+                    }/>
+                <input value={
+                        course.thirdLine
+                    }
+                    className="form-control"
+                    style={
+                        {
+                            marginBottom: "10px",
+                            padding: "5px",
+                            width: "100%"
+                        }
+                    }
+                    onChange={
+                        e => setCourse({
+                            ...course,
+                            thirdLine: e.target.value
+                        })
+                    }/>
+                <input value={
+                        course.startDate
+                    }
+                    className="form-control"
+                    type="date"
+                    style={
+                        {
+                            marginBottom: "10px",
+                            padding: "5px",
+                            width: "100%"
+                        }
+                    }
+                    onChange={
+                        e => setCourse({
+                            ...course,
+                            startDate: e.target.value
+                        })
+                    }/>
+                <input value={
+                        course.endDate
+                    }
+                    className="form-control"
+                    type="date"
+                    style={
+                        {
+                            marginBottom: "10px",
+                            padding: "5px",
+                            width: "100%"
+                        }
+                    }
+                    onChange={
+                        e => setCourse({
+                            ...course,
+                            endDate: e.target.value
+                        })
+                    }/>
+                <button style={
+                        {
+                            backgroundColor: "#007bff",
+                            color: "#fff",
+                            padding: "10px 20px",
+                            border: "none",
+                            borderRadius: "5px",
+                            cursor: "pointer",
+                            marginRight: "10px"
+                        }
+                    }
+                    onClick={addNewCourse}>
+                    Add
+                </button>
+                <button style={
+                        {
+                            backgroundColor: "#28a745",
+                            color: "#fff",
+                            padding: "10px 20px",
+                            border: "none",
+                            borderRadius: "5px",
+                            cursor: "pointer"
+                        }
+                    }
+                    onClick={updateCourse}>
+                    Update
+                </button>
+            </div>
+
             <div className="row">
                 {
                 courses.map((course) => (
@@ -42,6 +172,44 @@ function Dashboard() {
                                     }`
                                 }
                                 className="list-group-item">
+                                <button style={
+                                        {
+                                            backgroundColor: "#ff1100",
+                                            color: "#fff",
+                                            padding: "10px 20px",
+                                            border: "none",
+                                            borderRadius: "5px",
+                                            cursor: "pointer",
+                                            marginRight: "10px"
+                                        }
+                                    }
+                                    onClick={
+                                        (event) => {
+                                            event.preventDefault();
+                                            deleteCourse(course._id);
+                                        }
+                                }>
+                                    Delete
+                                </button>
+                                <button style={
+                                        {
+                                            backgroundColor: "#28a745",
+                                            color: "#fff",
+                                            padding: "10px 20px",
+                                            border: "none",
+                                            borderRadius: "5px",
+                                            cursor: "pointer"
+                                        }
+                                    }
+                                    onClick={
+                                        (event) => {
+                                            event.preventDefault();
+                                            setCourse(course);
+                                        }
+                                }>
+                                    Edit
+                                </button>
+
                                 <div>
                                     <p className="card-text"
                                         style={
