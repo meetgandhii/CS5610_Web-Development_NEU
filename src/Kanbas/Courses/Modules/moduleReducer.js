@@ -5,30 +5,25 @@ import db from "../../Database";
 const initialState = {
   modules: db.modules,
   module: {  _id: new Date().getTime(),
-    "name": "New Module",
-    "sections": [
-        {
-            "heading": "New Objectives",
-            "points": [
-                "New Content",
-                "New Content"
-            ]
-        }, {
-            "heading": "New Objectives",
-            "points": [
-                "New Content"
-              
-            ]
-        }, {
-            "heading": "New Objectives",
-            "points": [
-                "New Content",
-                "New Content",
-                "New Content"
-                
-            ]
-        }
-    ],
+    "name": "New Subject",
+        "heading": "New Heading",
+        "points": "New Content",
+        "points2": "New Content",
+        "points3": "New Content",
+        "points4": "New Content",
+        "points5": "New Content",
+
+        "heading1": "New Heading",
+        "points6": "New Content",
+        "points7": "New Content",
+
+        "heading2": "New Heading",
+        "points8": "New Content",
+        "points9": "New Content",
+        "points10": "New Content",
+        "points11": "New Content",
+        "points12": "New Content",
+        "points13": "New Content",
      },
 };
 

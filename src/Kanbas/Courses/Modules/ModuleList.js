@@ -15,7 +15,13 @@ function ModuleList() {
 
     return (
         <div className="list-group">
-            <li className="list-group-item" style={{display: "flex", alignItems: "center"}}>
+            <li className="list-group-item"
+                style={
+                    {
+                        display: "flex",
+                        alignItems: "center"
+                    }
+            }>
                 <button style={
                         {
                             backgroundColor: "#00bfff",
@@ -52,7 +58,10 @@ function ModuleList() {
                     Update
                 </button>
 
-                <input style={{marginRight: "10px"}} value={
+                <input style={
+                        {marginRight: "10px"}
+                    }
+                    value={
                         module.name
                     }
                     onChange={
@@ -62,12 +71,12 @@ function ModuleList() {
                         }))
                     }/>
                 <textarea value={
-                        module.sections
+                        module.heading
                     }
                     onChange={
                         (e) => dispatch(setModule({
                             ... module,
-                            section: e.target.value
+                            heading: e.target.value
                         }))
                     }/>
             </li>
@@ -128,13 +137,30 @@ function ModuleList() {
                         module.name
                     } </a>
                     <div class="list-group">
-                        {
-                        module.sections.map((section, sectionIndex) => (
-                            <div key={sectionIndex}>
-                                <a className="list-group-item">
+
+                        <div>
+                            <a className="list-group-item">
+                                <FontAwesomeIcon icon={faGripVertical}
+                                    className="needsSpaceOnRight"/>
+
+                                <i className="fa fa-ellipsis-v float-end"
+                                    style={
+                                        {marginLeft: "5px"}
+                                }></i>
+                                <input type="checkbox" checked className="float-end custom-control-input"
+                                    style={
+                                        {marginLeft: "5px"}
+                                    }/> {
+                                module.heading
+                            } </a>
+                            <ul className="list-group">
+
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
                                     <FontAwesomeIcon icon={faGripVertical}
                                         className="needsSpaceOnRight"/>
-
                                     <i className="fa fa-ellipsis-v float-end"
                                         style={
                                             {marginLeft: "5px"}
@@ -143,31 +169,243 @@ function ModuleList() {
                                         style={
                                             {marginLeft: "5px"}
                                         }/> {
-                                    section.heading
-                                } </a>
-                                <ul className="list-group">
-                                    {
-                                    section.points.map((point, pointIndex) => (
-                                        <li key={pointIndex}
-                                            className="list-group-item"
-                                            style={
-                                                {paddingLeft: "35px"}
-                                        }>
-                                            <FontAwesomeIcon icon={faGripVertical}
-                                                className="needsSpaceOnRight"/>
-                                            <i className="fa fa-ellipsis-v float-end"
-                                                style={
-                                                    {marginLeft: "5px"}
-                                            }></i>
-                                            <input type="checkbox" checked className="float-end custom-control-input"
-                                                style={
-                                                    {marginLeft: "5px"}
-                                                }/> {point} </li>
-                                    ))
-                                } </ul>
-                            </div>
-                        ))
-                    } </div>
+                                    module.points
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points2
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points3
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points4
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points5
+                                } </li>
+
+                            </ul>
+                            <a className="list-group-item">
+                                <FontAwesomeIcon icon={faGripVertical}
+                                    className="needsSpaceOnRight"/>
+
+                                <i className="fa fa-ellipsis-v float-end"
+                                    style={
+                                        {marginLeft: "5px"}
+                                }></i>
+                                <input type="checkbox" checked className="float-end custom-control-input"
+                                    style={
+                                        {marginLeft: "5px"}
+                                    }/> {
+                                module.heading1
+                            } </a>
+                            <ul className="list-group">
+
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points6
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points7
+                                } </li>
+                                
+
+                            </ul>
+                            <a className="list-group-item">
+                                <FontAwesomeIcon icon={faGripVertical}
+                                    className="needsSpaceOnRight"/>
+
+                                <i className="fa fa-ellipsis-v float-end"
+                                    style={
+                                        {marginLeft: "5px"}
+                                }></i>
+                                <input type="checkbox" checked className="float-end custom-control-input"
+                                    style={
+                                        {marginLeft: "5px"}
+                                    }/> {
+                                module.heading2
+                            } </a>
+                            <ul className="list-group">
+
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points8
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points9
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points10
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points11
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points12
+                                } </li>
+                                <li className="list-group-item"
+                                    style={
+                                        {paddingLeft: "35px"}
+                                }>
+                                    <FontAwesomeIcon icon={faGripVertical}
+                                        className="needsSpaceOnRight"/>
+                                    <i className="fa fa-ellipsis-v float-end"
+                                        style={
+                                            {marginLeft: "5px"}
+                                    }></i>
+                                    <input type="checkbox" checked className="float-end custom-control-input"
+                                        style={
+                                            {marginLeft: "5px"}
+                                        }/> {
+                                    module.points13
+                                } </li>
+                                
+
+                            </ul>
+                        </div>
+
+                    </div>
                 </li>
             ))
         } </div>
