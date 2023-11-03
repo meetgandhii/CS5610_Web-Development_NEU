@@ -75,13 +75,12 @@ function Assignments() {
                     <div key={index} style={{display: "flex", alignItems: "center"}}>
 
                         
-                    <Link onClick={() => dispatch(setAssignment(assignment))}
+                    <Link
                     to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
                         className="list-group-item"
                         style={
                             {alignItems: 'center', display: 'inline-block', width: '90%'}
                     }>
-                         
                         <FontAwesomeIcon icon={faGripVertical} className="needsSpaceOnRight"/>
                         <i className="fa fa-edit"
                             style={
@@ -123,15 +122,7 @@ function Assignments() {
                                         color: 'rgba(70,70,70,0.7)'
                                     }
                                 }>
-                                    {assignment.subtitle2} |</span>
-                                    <span style={
-                                    {
-                                        
-                                        color: 'rgba(70,70,70,0.7)'
-                                    }
-                                }>
-                                    {assignment.subtitle3}</span>
-                                    <br/>
+                                    {assignment.subtitle2}</span><br/>
                             </div>
                        
                     } </Link>

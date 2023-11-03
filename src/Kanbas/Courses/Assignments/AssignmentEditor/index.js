@@ -1,12 +1,22 @@
 import React from "react";
 import {useNavigate, useParams, Link} from "react-router-dom";
 import db from "../../../Database";
-
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "../assignmentsReducer";
+  
 
 function AssignmentEditor() {
     const {assignmentId} = useParams();
-    const assignment = db.assignments.find((assignment) => assignment._id === assignmentId);
-
+    
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
+    
 
     const {courseId} = useParams();
     const navigate = useNavigate();
@@ -42,7 +52,10 @@ function AssignmentEditor() {
                 {textAlign: 'center'}
             }>
                 <h5>Assignment Name</h5>
-                <input style={
+                <input value={assignment.title}
+          onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))
+        }
+                 style={
                         {
                             width: '100%',
                             padding: '5px',
@@ -51,7 +64,7 @@ function AssignmentEditor() {
                         }
                     }
                     type="text"
-                    value={assignment.title}/><br/><br/>
+                    /><br/><br/>
                 <textarea style={
                         {
                             width: '100%',
@@ -60,7 +73,21 @@ function AssignmentEditor() {
                         }
                     }
                     rows="4" className="form-control mb-2"
-                    value={assignment.subtitle}>
+                    value={assignment.subtitle}
+          onChange={(e) => dispatch(setAssignment({ ...assignment, subtitle: e.target.value }))
+        }>
+                </textarea><br/>
+                <textarea style={
+                        {
+                            width: '100%',
+                            borderRadius: '5px',
+                            border: '1px rgba(70,70,70,0.3) solid'
+                        }
+                    }
+                    rows="4" className="form-control mb-2"
+                    value={assignment.subtitle2}
+          onChange={(e) => dispatch(setAssignment({ ...assignment, subtitle2: e.target.value }))
+        }>
                 </textarea><br/><br/>
                 <table style={
                     {
@@ -82,7 +109,9 @@ function AssignmentEditor() {
                                     }
                                 }
                                 type="text"
-                                value="100"/>
+                                value={assignment.subtitle3}
+          onChange={(e) => dispatch(setAssignment({ ...assignment, subtitle3: e.target.value }))
+        }/>
                         </td>
                     </tr>
                     <tr>
@@ -270,8 +299,8 @@ function AssignmentEditor() {
                 <div style={{ margin: '0 50px 10px 50px' }}>
       <input type="checkbox" />
       <label style={{ marginLeft: '10px' }}>Notify users that this content has changed</label>
-      <button className="float-end btn btn-success">Save</button>
-      <button className="float-end btn btn-danger">Cancel</button>
+      <Link to={`/Kanbas/Courses/${courseId}/Assignments`} onClick={() => dispatch(updateAssignment(assignment))} className="float-end btn btn-success">Save</Link>
+      <Link  to={`/Kanbas/Courses/${courseId}/Assignments`}  className="float-end btn btn-danger">Cancel</Link>
     </div>
             </div>
 
