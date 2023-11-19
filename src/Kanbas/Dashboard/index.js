@@ -2,15 +2,15 @@ import {React, useState} from "react";
 import {Link} from "react-router-dom";
 import "./stylesheet.css";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+
 function Dashboard({
     courses,
     course,
     setCourse,
-    addNewCourse,
+    addCourse,
     deleteCourse,
     updateCourse
 }) {
-
 
     return (
         <div style={
@@ -125,7 +125,7 @@ function Dashboard({
                             marginRight: "10px"
                         }
                     }
-                    onClick={addNewCourse}>
+                    onClick={addCourse}>
                     Add
                 </button>
                 <button style={
@@ -184,10 +184,9 @@ function Dashboard({
                                         }
                                     }
                                     onClick={
-                                        (event) => {
-                                            event.preventDefault();
-                                            deleteCourse(course._id);
-                                        }
+                                        
+                                            deleteCourse
+                                        
                                 }>
                                     Delete
                                 </button>

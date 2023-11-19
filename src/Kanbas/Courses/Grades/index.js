@@ -1,6 +1,7 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import {useParams} from "react-router-dom";
-import db from "../../Database";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import "./stylesheet.css"
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -8,10 +9,37 @@ import 'font-awesome/css/font-awesome.min.css'; // Import FontAwesome CSS
 import {faGripVertical, faCog, faFileImport} from "@fortawesome/free-solid-svg-icons";
 
 function Grades() {
-    const {courseId} = useParams();
-    const assignments = db.assignments.filter((assignment) => assignment.course === courseId);
-    const enrollments = db.enrollments.filter((enrollment) => enrollment.course === courseId);
-    const tableHeads = db.gradestableHead.filter((tableHead) => tableHead.course === courseId);
+    const { courseId } = useParams();
+  const [assignments, setAssignments] = useState([]);
+  const [enrollments, setEnrollments] = useState([]);
+  const [tableHeads, setTableHeads] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [grades, setGrades] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const assignmentsResponse = await axios.get(`http://localhost:4000/api/assignments?course=${courseId}`);
+        setAssignments(assignmentsResponse.data);
+
+        const usersResponse = await axios.get("http://localhost:4000/api/users");
+        setUsers(usersResponse.data);
+
+        const gradesResponse = await axios.get("http://localhost:4000/api/grades");
+        setGrades(gradesResponse.data);
+
+        const enrollmentsResponse = await axios.get(`http://localhost:4000/api/enrollments?course=${courseId}`);
+        setEnrollments(enrollmentsResponse.data);
+
+        const tableHeadsResponse = await axios.get(`http://localhost:4000/api/gradetableshead?course=${courseId}`);
+        setTableHeads(tableHeadsResponse.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [courseId]);
     return (
         <div style={
             {width: "1000px"}
@@ -108,7 +136,7 @@ function Grades() {
                                 } </tr>
                                 {
                                 enrollments.map((enrollment) => {
-                                    const user = db.users.find((user) => user._id === enrollment.user);
+                                    const user = users.find((user) => user._id === enrollment.user);
                                     return (
                                         <tr>
                                             <td>{
@@ -119,7 +147,7 @@ function Grades() {
                                             }</td>
                                             {
                                             assignments.map((assignment) => {
-                                                const grade = db.grades.find((grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
+                                                const grade = grades.find((grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
                                                 return (
                                                     <td>{
                                                         grade ?. grade || ""
