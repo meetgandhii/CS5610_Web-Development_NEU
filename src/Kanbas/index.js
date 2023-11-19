@@ -2,12 +2,10 @@ import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-// import db from "./Database";
 import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
-
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -20,12 +18,15 @@ function Kanbas() {
     "thirdLine": "202410_1 Fall 2023 Semester Full Term"
   });
   const URL = "http://localhost:4000/api/courses";
+
   const addCourse = async () => {
+    console.log("added in kanbas1");
     const response = await axios.post(URL, course);
     setCourses([
       response.data,
       ...courses,
     ]);
+    console.log("added in kanbas after async call");
     setCourse({  name: "New Course",
     number: "RS45600",
     startDate: "2023-01-10",
@@ -33,6 +34,9 @@ function Kanbas() {
     secondLine: "CS4550.12631.202410",
     thirdLine: "202410_1 Fall 2023 Semester Full Term" });
   };
+
+  
+
 
   const deleteCourse = async (course) => {
     const response = await axios.delete(
@@ -70,7 +74,7 @@ function Kanbas() {
   };
   useEffect(() => {
     findAllCourses();
-  }, []);
+  }, [courses]);
 
   return (<Provider store={store}>
 

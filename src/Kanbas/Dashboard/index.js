@@ -146,11 +146,7 @@ function Dashboard({
             <div className="row">
                 {
                 courses.map((course) => (
-                    <div key={
-                            course._id
-                        }
-                        className="card d-flex col-lg-4 col-md-3 col-sm-2 col-xs-1"
-                        style={
+                    <div key={course._id} className="card d-flex col-lg-4 col-md-3 col-sm-2 col-xs-1" style={
                             {
                                 width: "260px",
                                 margin: "17.5px",
