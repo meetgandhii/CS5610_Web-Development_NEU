@@ -17,7 +17,7 @@ function Kanbas() {
     "secondLine": "CS4550.12631.202410",
     "thirdLine": "202410_1 Fall 2023 Semester Full Term"
   });
-  const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-server-t70p.onrender.com/api/courses";
 
   const addCourse = async () => {
     const response = await axios.post(URL, course);
