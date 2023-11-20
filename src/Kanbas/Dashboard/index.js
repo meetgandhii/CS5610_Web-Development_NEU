@@ -138,7 +138,7 @@ function Dashboard({
                             cursor: "pointer"
                         }
                     }
-                    onClick={updateCourse}>
+                    onClick={()=>updateCourse(course)}>
                     Update
                 </button>
             </div>
@@ -162,11 +162,7 @@ function Dashboard({
                                 }
                             }/>
                         <div className="card-body">
-                            <Link to={
-                                    `/Kanbas/Courses/${
-                                        course._id
-                                    }`
-                                }
+                            <div 
                                 className="list-group-item">
                                 <button style={
                                         {
@@ -179,9 +175,9 @@ function Dashboard({
                                             marginRight: "10px"
                                         }
                                     }
-                                    onClick={
+                                    onClick={() =>
                                         
-                                            deleteCourse
+                                            deleteCourse(course)
                                         
                                 }>
                                     Delete
@@ -197,22 +193,26 @@ function Dashboard({
                                         }
                                     }
                                     onClick={
-                                        (event) => {
+                                        ((event) => {
                                             event.preventDefault();
                                             setCourse(course);
-                                        }
+                                        })
                                 }>
                                     Edit
                                 </button>
 
                                 <div>
-                                    <p className="card-text"
+                                    <Link to={
+                                    `/Kanbas/Courses/${
+                                        course._id
+                                    }`
+                                } className="card-text"
                                         style={
                                             {color: "rgb(21, 112, 170)"}
                                     }>
                                         {
                                         course.name
-                                    } </p>
+                                    } </Link>
                                     <h4 style={
                                         {
                                             color: "#777",
@@ -232,7 +232,7 @@ function Dashboard({
                                         course.thirdLine
                                     } </p>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                     </div>
                 ))

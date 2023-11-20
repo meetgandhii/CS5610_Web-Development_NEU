@@ -20,13 +20,11 @@ function Kanbas() {
   const URL = "http://localhost:4000/api/courses";
 
   const addCourse = async () => {
-    console.log("added in kanbas1");
     const response = await axios.post(URL, course);
     setCourses([
       response.data,
       ...courses,
     ]);
-    console.log("added in kanbas after async call");
     setCourse({  name: "New Course",
     number: "RS45600",
     startDate: "2023-01-10",
@@ -42,8 +40,8 @@ function Kanbas() {
     const response = await axios.delete(
       `${URL}/${course._id}`
     );
-    setCourses(courses.filter(
-      (c) => c._id !== course._id));
+    setCourses([courses.filter(
+      (c) => c._id !== course._id)]);
   };
 
 
