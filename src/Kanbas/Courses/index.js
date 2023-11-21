@@ -63,7 +63,7 @@ useEffect(() => {
             <Route path="Modules" element={<Modules/>} />
             <Route path="Assignments" element={<Assignments/>} />
             <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>}/>
-            {/* <Route path="Grades" element={<Grades />} /> */}
+            <Route path="Grades" element={<Grades />} />
           </Routes>
         </div>
       </div>
