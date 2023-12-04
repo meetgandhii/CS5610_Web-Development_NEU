@@ -6,6 +6,10 @@ import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import Signin from "./users/signin";
+import Account from "./users/account";
+import UserTable from "./users/table";
+import Signup from "./users/signup";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -25,15 +29,17 @@ function Kanbas() {
       response.data,
       ...courses,
     ]);
-    setCourse({  name: "New Course",
-    number: "RS45600",
-    startDate: "2023-01-10",
-    endDate: "2023-05-15",
-    secondLine: "CS4550.12631.202410",
-    thirdLine: "202410_1 Fall 2023 Semester Full Term" });
+    setCourse({
+      name: "New Course",
+      number: "RS45600",
+      startDate: "2023-01-10",
+      endDate: "2023-05-15",
+      secondLine: "CS4550.12631.202410",
+      thirdLine: "202410_1 Fall 2023 Semester Full Term"
+    });
   };
 
-  
+
 
 
   const deleteCourse = async (course) => {
@@ -58,12 +64,14 @@ function Kanbas() {
         return c;
       })
     );
-    setCourse({ name: "New Course",
-    number: "RS45600",
-    startDate: "2023-01-10",
-    endDate: "2023-05-15",
-    secondLine: "CS4550.12631.202410",
-    thirdLine: "202410_1 Fall 2023 Semester Full Term"  });
+    setCourse({
+      name: "New Course",
+      number: "RS45600",
+      startDate: "2023-01-10",
+      endDate: "2023-05-15",
+      secondLine: "CS4550.12631.202410",
+      thirdLine: "202410_1 Fall 2023 Semester Full Term"
+    });
   };
 
   const findAllCourses = async () => {
@@ -91,7 +99,11 @@ function Kanbas() {
               deleteCourse={deleteCourse}
               updateCourse={updateCourse} />
           } />
-
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin/account" element={<Account />} /> 
+          <Route path="/signin/account/:id" element={<Account />} />
+          <Route path="/admin/users" element={<UserTable />} />
           <Route path="Courses/:courseId/*" element={
             <Courses courses={courses} />} />
 
