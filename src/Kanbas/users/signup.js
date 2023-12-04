@@ -91,6 +91,7 @@ function Signup() {
       <button style={styles.button} onClick={signup}>
         Signup
       </button>
+      <Link style={styles.button} to="/kanbas/signin">Sign In</Link>
     </div>
   );
 }

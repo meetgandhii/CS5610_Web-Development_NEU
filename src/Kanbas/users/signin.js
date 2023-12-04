@@ -27,6 +27,7 @@ function Signin() {
       <button style={styles.button} onClick={signin}>
         Signin
       </button>
+      <Link style={styles.button} to="/kanbas/signup">Sign Up</Link>
     </div>
   );
 }
