@@ -1,6 +1,7 @@
 import * as client from "./client";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Signin() {
   const [credentials, setCredentials] = useState({ username: "", password: "" });
   const navigate = useNavigate();
