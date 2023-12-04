@@ -8,11 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'font-awesome/css/font-awesome.min.css'; // Import FontAwesome CSS
 import { faCog, faFileImport } from "@fortawesome/free-solid-svg-icons";
 
+
 function Grades() {
     const { courseId } = useParams();
     const [jsonData, setJsonData] = useState([]);
     const [tableHead, setTableHead] = useState([]);
-    const URL_JSON = "https://kanbas-server-t70p.onrender.com/api/courses";
+    const BASE_API = process.env.REACT_APP_BASE_API_URL;
+    const URL_JSON = `${BASE_API}/api/courses`;
     const findAllCourses = async () => {
         try {
             const response = await axios.get( `${URL_JSON}/${courseId}/enrollments`);

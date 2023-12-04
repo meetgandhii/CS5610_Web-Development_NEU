@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+
+
 function WorkingWithArrays() {
+    const BASE_API = process.env.REACT_APP_BASE_API_URL;
     const [todo, setTodo] = useState({
         id: 1,
         title: "NodeJS Assignment",
@@ -9,7 +12,7 @@ function WorkingWithArrays() {
         due: "2021-09-09",
         completed: false,
     });
-    const API = "https://kanbas-server-t70p.onrender.com/a5/todos";
+    const API = `${BASE_API}/a5/todos`;
     const [todos, setTodos] = useState([]);
     const fetchTodos = async () => {
         const response = await axios.get(API);

@@ -11,7 +11,10 @@ import Account from "./users/account";
 import UserTable from "./users/table";
 import Signup from "./users/signup";
 
+
+
 function Kanbas() {
+  
   const [courses, setCourses] = useState([]);
   const [course, setCourse] = useState({
     "name": "New Course",
@@ -21,7 +24,8 @@ function Kanbas() {
     "secondLine": "CS4550.12631.202410",
     "thirdLine": "202410_1 Fall 2023 Semester Full Term"
   });
-  const URL = "https://kanbas-server-t70p.onrender.com/api/courses";
+  const BASE_API = process.env.REACT_APP_BASE_API_URL;
+  const URL = `${BASE_API}/api/courses`;
 
   const addCourse = async () => {
     const response = await axios.post(URL, course);

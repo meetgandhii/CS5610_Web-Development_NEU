@@ -10,7 +10,8 @@ function WorkingWithObjects() {
     completed: false,
     score: 0,
   });
-  const URL = "https://kanbas-server-t70p.onrender.com/a5/assignment";
+  const BASE_API = process.env.REACT_APP_BASE_API_URL;
+  const URL = `${BASE_API}/a5/assignment`;
   const fetchAssignment = async () => {
     const response = await axios.get(`${URL}`);
     setAssignment(response.data);
@@ -80,23 +81,23 @@ function WorkingWithObjects() {
         type="text" />
 
       <h4>Retrieving Objects</h4>
-      <a href="https://kanbas-server-t70p.onrender.com/a5/assignment"
+      <a href={`${BASE_API}/a5/assignment`}
         className="btn btn-primary me-2">
         Get Assignment
       </a>
       <h4>Retrieving Properties</h4>
       <a
-        href="https://kanbas-server-t70p.onrender.com/a5/assignment/title"
+        href={`${BASE_API}/a5/assignment/title`}
         className="btn btn-primary me-2">
         Get Title
       </a>
       <a
-        href="https://kanbas-server-t70p.onrender.com/a5/assignment/score"
+        href={`${BASE_API}/a5/assignment/score`}
         className="btn btn-primary me-2">
         Get score
       </a>
       <a
-        href="https://kanbas-server-t70p.onrender.com/a5/assignment/completed"
+        href={`${BASE_API}/a5/assignment/completed`}
         className="btn btn-primary me-2">
         Get completed status
       </a>
