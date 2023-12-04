@@ -121,6 +121,7 @@ const styles = {
     marginBottom: "10px",
   },
   button: {
+    margin: "10px 15px",
     backgroundColor: "#4CAF50",
     color: "white",
     padding: "10px 15px",

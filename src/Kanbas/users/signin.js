@@ -53,6 +53,7 @@ const styles = {
     marginBottom: "15px",
   },
   button: {
+    margin: "10px 15px",
     backgroundColor: "#4CAF50",
     color: "white",
     padding: "10px 15px",
