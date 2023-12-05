@@ -1,6 +1,6 @@
 import * as client from "./client";
 import { useState } from "react";
-import { NavBar } from "./nav";
+import Nav from "./nav.js";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Signin() {
@@ -12,7 +12,7 @@ function Signin() {
   };
   return (
     <div style={styles.container}>
-      <NavBar />
+      <Nav />
       <h1 style={styles.heading}>Signin</h1>
       <label style={styles.label}>Username</label>
       <input

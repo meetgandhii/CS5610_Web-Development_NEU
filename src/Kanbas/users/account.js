@@ -2,7 +2,7 @@ import * as client from "./client";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import NavBar from "./nav";
+import Nav from "./nav.js";
 function Account() {
     const { id } = useParams();
     const [account, setAccount] = useState(null);
@@ -37,7 +37,7 @@ function Account() {
 
     return (
         <div style={styles.container}>
-            <NavBar />
+            <Nav />
             <h1 style={styles.heading}>Account</h1>
             {account && (
                 <div>
