@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import * as client from "./client";
+import { NavBar } from "./nav";
 function Signup() {
   const [error, setError] = useState("");
   const [credentials, setCredentials] = useState({
@@ -17,7 +18,9 @@ function Signup() {
     }
   };
   return (
+   
     <div style={styles.container}>
+       <NavBar />
       <h1 style={styles.heading}>Signup</h1>
       {error && <div style={styles.error}>{error}</div>}
       <label style={styles.label}>Username</label>
