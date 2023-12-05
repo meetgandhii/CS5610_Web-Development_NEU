@@ -15,7 +15,7 @@ const NavBar = () => {
           <Link to="/kanbas/signin">Signin</Link>
         </li>
         <li style={{ marginRight: '10px', border: '1px solid #ddd', padding: '8px', borderRadius: '4px' }}>
-          <Link to="/kanbas/signout">Signout</Link>
+          <Link to="/kanbas/signup">Signup</Link>
         </li>
         <li style={{ marginRight: '10px', border: '1px solid #ddd', padding: '8px', borderRadius: '4px' }}>
           <Link to="/kanbas/signin/account">Account</Link>
